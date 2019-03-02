@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-button type="primary" @click="teachplayFormVisible = true">添加课程计划</el-button>
-    //树形组件
+    <!--树形组件-->
     <el-tree
       :data="teachplanList"
       :props="defaultProps"
@@ -205,11 +205,12 @@
         })
       }
     },
+    //钩子方法,进入页面就被调用
     mounted(){
       //课程id
       this.courseid = this.$route.params.courseid;
       //查询课程计划
-      // this.findTeachplan()
+       this.findTeachplan()
 
     }
   }
